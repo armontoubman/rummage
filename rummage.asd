@@ -1,13 +1,19 @@
 (defsystem "rummage"
-  :version "0.1.0"
+  :version "1.0.0"
   :author "Armon Toubman"
-  :license "Expat"
+  :license "MIT"
   :depends-on ("dexador"
-               "lparallel")
+               "lparallel"
+               "cl-generator"
+               "lquery"
+               "alexandria"
+               "quri"
+               "log4cl"
+               "bt-semaphore")
   :components ((:module "src"
                 :components
                 ((:file "main"))))
-  :description ""
+  :description "Rummage is a small web-scraping library"
   :in-order-to ((test-op (test-op "rummage/tests"))))
 
 (defsystem "rummage/tests"
