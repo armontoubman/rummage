@@ -30,7 +30,7 @@ Rummage is a small web-scraping library for Common Lisp.
 ;; Prepare a function that prints the author in each item.
 (defun print-author (item)
   ; Do something with the passed item.
-  (format "~a~%" (getf item :author))
+  (format t "~a~%" (getf item :author))
   ; Pass it on to the next function in the pipeline (or not).
   item)
 
